@@ -12,6 +12,7 @@ class ProfilePage extends Component {
     }
   }
 
+// lifecycle Methods can be used for allowing data to be passed once the component is ready
  componentDidMount(){
    fetch('https://www.turing.io/graduates.json?_=1502323012239')
    .then(res => res.json())
@@ -35,18 +36,8 @@ class ProfilePage extends Component {
   }
 }
 
-// class Profile extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <h3>{this.props.person.title}</h3>
-//         <img src={this.props.person.field_picture.src}/>
-//       </div>
-//     )
-//   }
-// }
-
-const Profile = (props) => {
+//  Functional components for component types like Square that only consist of a render method.
+function Profile (props) {
   return (
     <div>
       <h3>{props.person.title}</h3>
