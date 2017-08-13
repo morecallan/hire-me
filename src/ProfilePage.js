@@ -14,7 +14,7 @@ class ProfilePage extends Component {
 
 // lifecycle Methods can be used for allowing data to be passed once the component is ready
  componentDidMount(){
-   fetch('https://www.turing.io/graduates.json?_=1502323012239')
+   fetch('')
    .then(res => res.json())
    .then((results) => this.setState({ turds: results }));
  }
